@@ -1,0 +1,10 @@
+decord
+matplotlib
+opencv_python
+pyarrow
+Requests
+safetensors
+sentencepiece
+flash_attn
+accelerate
+dfloat11[cuda12]

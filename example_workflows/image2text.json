@@ -1,0 +1,191 @@
+{
+  "id": "fe70c562-e4a5-4ba7-8eef-2777cc31842a",
+  "revision": 0,
+  "last_node_id": 33,
+  "last_link_id": 41,
+  "nodes": [
+    {
+      "id": 26,
+      "type": "LoadImage",
+      "pos": [
+        8340,
+        -1180
+      ],
+      "size": [
+        320,
+        560
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.39",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "111 (1).png",
+        "image"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "BagelByHugo",
+      "pos": [
+        8690,
+        -1170
+      ],
+      "size": [
+        400,
+        540
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "label": "thinking",
+          "name": "thinking",
+          "type": "STRING",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BagelByHugo"
+      },
+      "widgets_values": [
+        "reverse",
+        "请仔细描述这张图片。",
+        1424256168,
+        "randomize",
+        4,
+        2,
+        0,
+        1,
+        3,
+        50,
+        0,
+        "global",
+        false,
+        0.30000000000000004,
+        1024,
+        true,
+        "DFloat11",
+        false,
+        true,
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 33,
+      "type": "ShowText|pysssss",
+      "pos": [
+        9120,
+        -1170
+      ],
+      "size": [
+        300,
+        540
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "label": "字符串",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "ba22ba11e9073d45c5779d557593b2f106aac8b4",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "这张图片展示了一幅宁静的自然景象，描绘了两个人在一条小船上划船的场景。小船位于画面的中央，船上有两个人，他们都戴着宽边草帽，穿着休闲的衣服，背着背包。两人各自手持船桨，正在划船，显得非常悠闲。\n\n小船周围是茂密的绿色植物，主要是大大的荷叶，荷叶的颜色从深绿到浅绿不等，显得生机勃勃。荷叶上还挂着一些水珠，反射出周围的光线，增加了画面的生动感。荷叶从画面的四周向中间延伸，形成一个天然的屏障，将小船包围在中间。\n\n水面呈现出清澈的蓝绿色，水面上有一些波纹，反射出荷叶和天空的颜色，显得非常宁静。水面上还可以看到一些荷叶的倒影，增加了画面的层次感。\n\n整个画面给人一种宁静、自然的感觉，仿佛置身于一个世外桃源，远离城市的喧嚣，享受大自然的美好。"
+      ]
+    }
+  ],
+  "links": [
+    [
+      35,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      27,
+      1,
+      33,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2839025177495016,
+      "offset": [
+        -8184.122919383258,
+        1259.5304115714969
+      ]
+    },
+    "ue_links": [],
+    "frontendVersion": "1.20.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
