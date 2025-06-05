@@ -1,0 +1,16 @@
+[project]
+name = "bagel-hugo"
+description = "This repository encapsulates the BAGEL model as ComfyUI nodes for use, including image editing and image inversion features, but it does not include text-to-image functionality."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["decord", "matplotlib", "opencv_python", "pyarrow", "Requests", "safetensors", "sentencepiece", "flash_attn", "accelerate", "dfloat11[cuda12]"]
+
+[project.urls]
+Repository = "https://github.com/MoonHugo/ComfyUI-BAGEL-Hugo"
+#  Used by Comfy Registry https://registry.comfy.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-BAGEL-Hugo"
+Icon = ""
+includes = []
